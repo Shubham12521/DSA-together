@@ -1,3 +1,5 @@
+# name :Shubham Rahul Sharma
+
 class Solution{
   public:
     int MissingNumber(vector<int>& array, int n) {
