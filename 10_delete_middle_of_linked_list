@@ -1,0 +1,32 @@
+name: Shubham Ragul Sharma
+Class: SE_AIDS B
+
+
+// Deletes middle of linked list and returns head of the modified list
+Node* deleteMid(Node* head)
+{
+     int n = 0;
+    Node* temp = head;
+    while(temp)
+    {
+        ++n;
+        temp = temp->next;
+    }
+    int idx = n/2 + 1;
+    int i = 0;
+    temp = head;
+    Node* prev = head;
+    while(temp)
+    {
+        ++i;
+        if(i == idx)
+        {
+            prev->next = temp->next;
+            delete temp;
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    return head;
+}
